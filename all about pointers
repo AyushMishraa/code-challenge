@@ -1,0 +1,50 @@
+#include <iostream>
+using namespace std;
+
+void print(int*p)
+{
+  cout<<p<<endl;
+  cout<<*p<<endl;
+}
+void update (int *p)
+{
+  p=p+1;
+  *p=*p+5;
+  cout<<*p<<endl;
+  cout<<p<<endl;
+}
+void getupdate(int *arr,int n)
+{
+  int sum=0;
+  for(int i=0;i<n;i++)
+    {
+      sum = sum+arr[i];
+    }
+  cout<<"--->>>  "  <<sum<<endl;
+}
+int main()
+{
+  char ch[6] ="abcde";
+  int arr[4]={2,3,4,5};
+  int *p=0;
+  
+   p=&arr[0];
+  
+ cout<<"addres of array is "<<&arr[0]<<endl;
+   cout<<"addres of array is "<<arr<<endl;
+  cout<<*arr<<endl;
+   cout<<*arr+6<<endl;
+  cout<<*(arr+1)<<endl;
+  cout<<ch[4]<<endl;
+  cout<<ch<<endl;
+ 
+  print(p);
+  update(p);
+
+  // for start array from where you want
+  getupdate(arr+2,2);
+  
+  cout<<p<<endl; 
+   cout<<*arr<<endl;
+  return 0;
+}
