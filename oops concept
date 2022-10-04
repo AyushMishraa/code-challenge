@@ -1,0 +1,39 @@
+#include <iostream>
+using namespace std;
+
+class hero{
+   public:
+  int health;
+  // simple constructor
+   hero(){
+    cout<<"constructor called"<<endl;
+  }
+
+  // parametridsed constructor
+  hero(int health)
+{
+  this->health=health;
+  cout<<this->health<<endl;
+}
+ // static keyword
+   static int timetocomplete;
+
+ // static function
+    static int function()
+{
+  return timetocomplete;
+}
+};
+
+int hero::timetocomplete=19;
+
+int main()
+{
+  hero ramesh;
+   ramesh.health=100;
+
+  cout<<"helath of ramesh is "<< ramesh.health<<endl;
+  cout<<hero::timetocomplete<<endl;
+  cout<<hero::function()<<endl;
+  return 0;
+ }
